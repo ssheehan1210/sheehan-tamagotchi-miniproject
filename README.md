@@ -11,7 +11,7 @@ Let's use our front-end web development skills to create a "living" pet! We'll u
 - Create a repo for your tamagotchi pet.
 - Make a commit after you finish each one of the following:
 
-1. Create a class for you tamagotchi.
+1. Create a class for you tamagotchi. (Done)
 2. Display a character of your choice on the screen to represent your pet.
 3. Display the following metrics for your pet:
 	- Hunger (1-10 scale)
