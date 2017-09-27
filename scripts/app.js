@@ -49,8 +49,9 @@ class Tamagotchi {
 		// code
 	}
 
-	namePet(){
-		// code
+	namePet(name){
+		this.name = name;
+		console.log("Congrats! Your pet's name is now " + this.name + "!");
 	}
 
 	increaseAge(){
@@ -74,9 +75,15 @@ class Tamagotchi {
 	}
 }
 
-// Driver Code:
-// const newTama = new Tamagotchi(true);
+const giveName = (pet) => {
+	console.log("What name would you like to give to your pet?");
+	let newName = prompt("What name would you like to give your pet?");
+	pet.namePet(newName);
+}
 
-console.log("-----------------------------------");
+// Driver Code:
+const newTama = new Tamagotchi(true);
+
+console.log("--------------------------");
 
 console.log("Finished Running Tamagotchi JS File");
