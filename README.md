@@ -14,13 +14,13 @@ Let's use our front-end web development skills to create a "living" pet! We'll u
 1. Create a class for you tamagotchi. (Done)
 2. Display a character of your choice on the screen to represent your pet. (Done)
 3. Display the following metrics for your pet:
-	- Hunger (1-10 scale)
-	- Sleepiness (1-10 scale)
-	- Boredom (1-10 scale)
-	- Age
+	- Hunger (1-10 scale) (Layout Done)
+	- Sleepiness (1-10 scale) (Layout Done)
+	- Boredom (1-10 scale) (Layout Done)
+	- Age (Layout Done)
 4. Add buttons to the screen to feed your pet, turn off the lights, and play with your pet.
 5. Add the ability to name your pet. (Done)
-6. Style the page.
+6. Style the page. (Done)
 7. Increase your pet's age every x minutes.
 8. Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your choosing.
 9. You pet should die if Hunger, Boredom, or Sleepiness hits 10.

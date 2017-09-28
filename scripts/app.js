@@ -4,6 +4,8 @@ console.log("--------------------------");
 
 // For more info about Tamagotchi, go to this link: http://tamagotchi.wikia.com/wiki/Tamagotchi
 
+let time = 0;
+
 class Tamagotchi {
 	constructor(aliveStatus){
 		this.name = "None";
@@ -18,44 +20,32 @@ class Tamagotchi {
 	}
 
 	feed(){
-		// code
+		this.hunger = 1;
 	}
 
 	playGame(){
-		// code
+		this.boredom = 1;
 	}
 
 	clean(){
-		// code
+		this.sleepiness += 1;
+		this.boredom -= 1;
 	}
 
 	toggleLights(){
-		// code
-	}
-
-	showHunger(){
-		// code
-	}
-
-	showSleepiness(){
-		// code
-	}
-
-	showBoredom(){
-		// code
-	}
-
-	showAge(){
-		// code
+		this.sleepiness = 1;
 	}
 
 	namePet(name){
 		this.name = name;
 		console.log("Congrats! Your pet's name is now " + this.name + "!");
+		$('h1').text(`${this.name}`);
 	}
 
 	increaseAge(){
-		// code
+		if (timer % 60 === 0){
+			this.age += 1;
+		}
 	}
 
 	increaseConditionStats(){
@@ -63,7 +53,7 @@ class Tamagotchi {
 	}
 
 	dying(){
-		// code
+		const deadPet = alert("Oh no! " + newTama.name + " died!");
 	}
 
 	morphPet(){
@@ -79,6 +69,37 @@ const giveName = (pet) => {
 	console.log("What name would you like to give to your pet?");
 	let newName = prompt("What name would you like to give your pet?");
 	pet.namePet(newName);
+};
+
+const setTimer = () => {
+	timer = setInterval(() => {
+
+		time++;
+
+		if (time % 10 === 0){
+			newTama.hunger++;
+			console.log("Adding hunger. Current hunger: " + newTama.hunger);
+		}
+
+		if (time % 20 === 0){
+			newTama.boredom++;
+			console.log("Adding boredom.  Current boredom: " + newTama.boredom);
+		}
+
+		if (time % 30 === 0){
+			newTama.sleepiness++;
+			console.log("Adding sleepiness.  Current sleepiness: " + newTama.sleepiness);
+		}
+
+		if (newTama.hunger === 10 || newTama.sleepiness === 10 || newTama.boredom === 10){
+			clearInterval(timer); // ends the countdown
+			newTama.dying();
+		}
+
+		// $('#timer').text(`timer: ${time}s`)
+		// updates the time on the board
+
+	}, 1000) // each interval happens after every second
 };
 
 // Driver Code:
