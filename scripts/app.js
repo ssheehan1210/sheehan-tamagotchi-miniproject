@@ -79,7 +79,7 @@ const giveName = (pet) => {
 	console.log("What name would you like to give to your pet?");
 	let newName = prompt("What name would you like to give your pet?");
 	pet.namePet(newName);
-}
+};
 
 // Driver Code:
 const newTama = new Tamagotchi(true);
