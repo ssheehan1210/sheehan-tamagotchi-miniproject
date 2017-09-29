@@ -38,20 +38,24 @@ class Tamagotchi {
 	}
 
 	feed(){
+		console.log(this.name + " ate some malasadas and is no longer hungry!");
 		this.hunger = 1;
 	}
 
 	playGame(){
+		console.log(this.name + " looks very happy!");
 		this.boredom = 1;
 	}
 
 	exercise(){
+		console.log("EVERY DAY IS LEG DAY FOR " + this.name + "!");
 		this.hunger += 1;
 		this.sleepiness += 1;
 		this.boredom -= 5;
 	}
 
 	toggleLights(){
+		console.log(this.name + " slept really well!");
 		this.sleepiness = 1;
 	}
 
