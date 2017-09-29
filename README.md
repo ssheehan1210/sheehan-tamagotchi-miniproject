@@ -25,11 +25,11 @@ Let's use our front-end web development skills to create a "living" pet! We'll u
 8. Increase your pet's Hunger, Sleepiness, and Bored metrics on an interval of your choosing. (Done)
 9. You pet should die if Hunger, Boredom, or Sleepiness hits 10. (Done)
 10. Morph your pet at certain ages. (Done)
-11. Animate your pet across the screen.
+11. Animate your pet across the screen. (Done)
 
 ## Extras
 
 - Have your tamagotchi give birth to baby tamagotchi.
 - With special powers (extends the class).
-- Add an excercise method to your tamagotchi that affects certain properties.
+- Add an excercise method to your tamagotchi that affects certain properties. (Done)
 - Add anything you can think of, use your imagination.

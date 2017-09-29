@@ -1,4 +1,4 @@
-console.log("Running Tamagotchi JS File");
+console.log("Running Project JS File");
 
 console.log("--------------------------");
 
@@ -12,6 +12,7 @@ $('button#feeding-button').on('click', () => {
 
 $('button#play-button').on('click', () => {
 	newTama.playGame();
+	newTama.animatePetPlay();
 });
 
 $('button#lights-button').on('click', () => {
@@ -20,6 +21,7 @@ $('button#lights-button').on('click', () => {
 
 $('button#exercise-button').on('click', () => {
 	newTama.exercise();
+	newTama.animatePetExercise();
 });
 
 class Tamagotchi {
@@ -78,8 +80,80 @@ class Tamagotchi {
 		$('#shellder-box').append('<img src=' + this.currentForm + '>');
 	}
 
-	animatePet(){
-		// code
+	animatePetPlay(){
+		const loopDown = () => {
+			$('#shellder-box img').animate({
+				marginTop : 50
+			},
+			100, function() {
+				loopUp();
+			});
+		};
+		const loopUp = () => {
+			$('#shellder-box img').animate({
+				marginTop : 0
+			},
+			100);
+		};
+		loopDown();
+	}
+
+	animatePetExercise(){
+		const loopDown = () => {
+			$('#shellder-box img').animate({
+				marginTop : 50
+			},
+			100, () => {
+				loopUp();
+			});
+		};
+		const loopUp = () => {
+			$('#shellder-box img').animate({
+				marginTop : -50
+			},
+			100, () => {
+				loopDownTwo();
+			});
+		};
+		const loopDownTwo = () => {
+			$('#shellder-box img').animate({
+				marginTop : 50
+			},
+			100, () => {
+				loopUpTwo();
+			});
+		};
+		const loopUpTwo = () => {
+			$('#shellder-box img').animate({
+				marginTop : -100
+			},
+			100, () => {
+				loopDownThree();
+			});
+		};
+		const loopDownThree = () => {
+			$('#shellder-box img').animate({
+				marginTop : 50
+			},
+			100, () => {
+				loopUpThree();
+			});
+		};
+		const loopUpThree = () => {
+			$('#shellder-box img').animate({
+				marginTop : -150
+			},
+			100, () => {
+				loopDownFour();
+			});
+		};
+		const loopDownFour = () => {
+			$('#shellder-box img').animate({
+				marginTop : 0
+			},
+			100);
+		};
+		loopDown();
 	}
 }
 
@@ -100,17 +174,17 @@ const setTimer = () => {
 			console.log("Happy birthday, " + newTama.name + "! You are now " + newTama.age + "!");
 		}
 
-		if (time % 20 === 0){
+		if (time % 15 === 0){
 			newTama.hunger++;
 			console.log("Adding hunger. Current hunger: " + newTama.hunger);
 		}
 
-		if (time % 30 === 0){
+		if (time % 20 === 0){
 			newTama.boredom++;
 			console.log("Adding boredom.  Current boredom: " + newTama.boredom);
 		}
 
-		if (time % 40 === 0){
+		if (time % 25 === 0){
 			newTama.sleepiness++;
 			console.log("Adding sleepiness.  Current sleepiness: " + newTama.sleepiness);
 		}
@@ -137,4 +211,8 @@ const newTama = new Tamagotchi(true);
 
 console.log("--------------------------");
 
-console.log("Finished Running Tamagotchi JS File");
+console.log("Done Running JS File");
+console.log("To start, run giveName(newTama) and give your pet a name.");
+console.log("After that, run setTimer() to activate your pet.");
+
+
