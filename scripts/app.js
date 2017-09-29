@@ -15,8 +15,8 @@ class Tamagotchi {
 		this.age = 0;
 		this.alive = aliveStatus;
 		this.lightsOn = true;
-		this.currentForm = "Stage 1";
-		this.potentialForms = ["Stage 1", "Stage 2", "Stage 3", "Stage 4", "Stage 5"];
+		this.currentForm = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png";
+		this.potentialForms = ["https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/90.png", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/90.png", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/91.png", "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/shiny/91.png"];
 	}
 
 	feed(){
@@ -43,8 +43,12 @@ class Tamagotchi {
 	}
 
 	increaseAge(){
-		if (timer % 60 === 0){
+		if (timer % 10 === 0){
+			console.log("Happy birthday, " + this.name + "!");
 			this.age += 1;
+		}
+		if (this.age % 2 === 0){
+			this.morphPet();
 		}
 	}
 
@@ -57,7 +61,17 @@ class Tamagotchi {
 	}
 
 	morphPet(){
-		// code
+		if (this.currentForm === this.potentialForms[0]){
+			this.currentForm = this.potentialForms[1];
+		} else if (this.currentForm === this.potentialForms[1]){
+			this.currentForm = this.potentialForms[2];
+		} else if (this.currentForm === this.potentialForms[2]){
+			this.currentForm = this.potentialForms[3];
+		} else if (this.currentForm === this.potentialForms[3]){
+			console.log("Highest form already achieved");
+		}
+		$('#shellder-box img').remove();
+		$('#shellder-box').append('<img src=' + this.currentForm + '>');
 	}
 
 	animatePet(){
@@ -69,6 +83,7 @@ const giveName = (pet) => {
 	console.log("What name would you like to give to your pet?");
 	let newName = prompt("What name would you like to give your pet?");
 	pet.namePet(newName);
+	$('#shellder-box').append('<img src=' + pet.currentForm + '>');
 };
 
 const setTimer = () => {
@@ -94,6 +109,10 @@ const setTimer = () => {
 		if (newTama.hunger === 10 || newTama.sleepiness === 10 || newTama.boredom === 10){
 			clearInterval(timer); // ends the countdown
 			newTama.dying();
+		}
+
+		if (time % 10 === 0){
+			newTama.increaseAge();
 		}
 
 		$('#hunger-display p').text(`${newTama.hunger}`);
