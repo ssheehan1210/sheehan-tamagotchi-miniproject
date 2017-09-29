@@ -29,66 +29,98 @@ div#second-row {
 
 #hunger-display {
 	border: 1px solid black;
+	background-image: none;
+	background-color: red;
 }
 
 #hunger-display.col-3 h5 {
 	height: 50px;
 	margin: 0;
 	padding: 0;
+	background-image: none;
+	background-color: red;
+	color: silver;
 }
 
 #hunger-display.col-3 p {
 	height: 40px;
 	margin: 0;
 	padding: 0;
+	background-image: none;
+	background-color: red;
+	color: silver;
 }
 
 #sleepiness-display {
 	border: 1px solid black;
+	background-image: none;
+	background-color: blue;
 }
 
 #sleepiness-display.col-3 h5 {
 	height: 50px;
 	margin: 0;
 	padding: 0;
+	background-image: none;
+	background-color: blue;
+	color: gold;
 }
 
 #sleepiness-display.col-3 p {
 	height: 40px;
 	margin: 0;
 	padding: 0;
+	background-image: none;
+	background-color: blue;
+	color: gold;
 }
 
 #boredom-display {
 	border: 1px solid black;
+	background-image: none;
+	background-color: gold;
 }
 
 #boredom-display.col-3 h5 {
 	height: 50px;
 	margin: 0;
 	padding: 0;
+	background-image: none;
+	background-color: gold;
+	color: blue;
 }
 
 #boredom-display.col-3 p {
 	height: 40px;
 	margin: 0;
 	padding: 0;
+	background-image: none;
+	background-color: gold;
+	color: blue;
 }
 
 #age-display {
 	border: 1px solid black;
+	background-image: none;
+	background-color: silver;
 }
 
 #age-display.col-3 h5 {
 	height: 50px;
 	margin: 0;
 	padding: 0;
+	background-image: none;
+	background-color: silver;
+	color: red;
 }
 
 #age-display.col-3 p {
 	height: 40px;
 	margin: 0;
 	padding: 0;
+	background-image: none;
+	background-color: silver;
+	color: red;
 }
 
 div.btn-toolbar {
