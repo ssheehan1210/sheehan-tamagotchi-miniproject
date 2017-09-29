@@ -96,8 +96,10 @@ const setTimer = () => {
 			newTama.dying();
 		}
 
-		// $('#timer').text(`timer: ${time}s`)
-		// updates the time on the board
+		$('#hunger-display p').text(`${newTama.hunger}`);
+		$('#boredom-display p').text(`${newTama.boredom}`);
+		$('#sleepiness-display p').text(`${newTama.sleepiness}`);
+		$('#age-display p').text(`${newTama.age}`);
 
 	}, 1000) // each interval happens after every second
 };
