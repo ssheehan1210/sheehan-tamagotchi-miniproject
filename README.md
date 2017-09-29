@@ -18,7 +18,7 @@ Let's use our front-end web development skills to create a "living" pet! We'll u
 	- Sleepiness (1-10 scale) (Done)
 	- Boredom (1-10 scale) (Done)
 	- Age (Done)
-4. Add buttons to the screen to feed your pet, turn off the lights, and play with your pet.
+4. Add buttons to the screen to feed your pet, turn off the lights, and play with your pet. (Done)
 5. Add the ability to name your pet. (Done)
 6. Style the page. (Done)
 7. Increase your pet's age every x minutes. (Done)

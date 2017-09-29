@@ -92,14 +92,46 @@ div#second-row {
 	padding: 0;
 }
 
+div.btn-toolbar {
+	height: 100px;
+}
+
+div.btn-group.mr-2 {
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+button.btn.btn-primary {
+	background-image: none;
+	border-color: black;
+}
+
+#feeding-button {
+	background-color: red;
+}
+
+#play-button {
+	background-color: white;
+	color: red;
+}
+
+#lights-button {
+	background-color: red;
+}
+
+#exercise-button {
+	background-color: white;
+	color: red;
+}
+
 #item-box {
-	height: 650px;
+	height: 580px;
 }
 
 #shellder-box {
 	width: 300px;
 	height: 300px;
 	position: absolute;
-	margin-top: 350px;
+	margin-top: 280px;
 	margin-left: 33%;
 }
